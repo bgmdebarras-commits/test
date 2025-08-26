@@ -31,7 +31,7 @@ const FAQ = () => {
     },
     {
       question: "Êtes-vous assurés pour les interventions ?",
-      answer: "Absolument, DGM Débarras dispose d'une assurance responsabilité civile professionnelle qui couvre tous nos interventions. Nous sommes également assurés pour les dommages qui pourraient survenir pendant le transport et la manutention de vos biens."
+      answer: "Absolument, BGM Débarras dispose d'une assurance responsabilité civile professionnelle qui couvre tous nos interventions. Nous sommes également assurés pour les dommages qui pourraient survenir pendant le transport et la manutention de vos biens."
     }
   ];
 

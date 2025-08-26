@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="text-3xl font-bold text-white mb-4">
-              DGM <span className="text-yellow-500">Débarras</span> Nettoyage
+              BGM <span className="text-yellow-500">Débarras</span> Nettoyage
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Spécialiste du débarras et du nettoyage en Île-de-France depuis plus de 10 ans. 
@@ -24,7 +24,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-orange-500" />
-                <span>contact@dgm-debarras.fr</span>
+                <span>contact@bgm-debarras.fr</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-orange-500" />
@@ -78,7 +78,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2024 DGM Débarras. Tous droits réservés. | SIRET: 123 456 789 00012 | Assurance RC Pro
+              © 2024 BGM Débarras. Tous droits réservés. | SIRET: 123 456 789 00012 | Assurance RC Pro
             </div>
             
             <div className="flex space-x-4">

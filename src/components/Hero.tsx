@@ -96,7 +96,7 @@ const Hero = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="https://i.ibb.co/7tdc6hL3/Chat-GPT-Image-Aug-25-2025-01-44-40-PM.png"
+                src="https://i.postimg.cc/Yq3QZwNG/BGM-Affiche.jpg"
                 alt="Service de débarras professionnel"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />

@@ -11,7 +11,7 @@ const Testimonials = () => {
       image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
       location: "Paris 15ème",
       rating: 5,
-      text: "Service exceptionnel ! L'équipe de DGM Débarras a transformé ma maison en quelques heures. Très professionnels et prix raisonnable.",
+      text: "Service exceptionnel ! L'équipe de BGM Débarras a transformé ma maison en quelques heures. Très professionnels et prix raisonnable.",
       service: "Nettoyage de maison"
     },
     {
@@ -83,7 +83,7 @@ const Testimonials = () => {
       image: "https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
       location: "Rueil-Malmaison",
       rating: 5,
-      text: "Prix très compétitif et qualité au rendez-vous. DGM Débarras est devenu mon prestataire de confiance.",
+      text: "Prix très compétitif et qualité au rendez-vous. BGM Débarras est devenu mon prestataire de confiance.",
       service: "Nettoyage régulier"
     },
     {

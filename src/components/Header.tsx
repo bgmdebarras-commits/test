@@ -20,7 +20,7 @@ const Header = () => {
                 href="#devis"
                 className="hover:text-orange-500"
               >
-                <span span className="font-semibold text-white text-xs sm:text-sm lg:text-base">Devis gratuit - demande d’intervention</span>
+                <span className="font-semibold text-white text-xs sm:text-sm lg:text-base">Devis gratuit - demande d’intervention</span>
               </a>
 
       
@@ -29,14 +29,14 @@ const Header = () => {
       {/* Column 2 */}
       <div className="flex items-center justify-center space-x-2">
         <Clock size={14} className="text-yellow-400" />
-        <span span className="font-semibold text-white text-xs sm:text-sm lg:text-base">7J/7 et 24h/24 </span>
+        <span className="font-semibold text-white text-xs sm:text-sm lg:text-base">7J/7 et 24h/24 </span>
       </div>
 
       {/* Column 3 */}
       <div className="flex items-center justify-end sm:justify-center space-x-0 sm:space-x-2">
         <Phone size={14} className="text-yellow-400" />
         <a href="tel:+21625165868" className="hover:text-orange-500">
-          <span span className="font-semibold text-white text-xs sm:text-sm lg:text-base">01 89 16 23 40 (Appel direct)</span>
+          <span  className="font-semibold text-white text-xs sm:text-sm lg:text-base">01 89 16 23 40 (Appel direct)</span>
         </a>
         
       </div>
@@ -50,11 +50,12 @@ const Header = () => {
     <div className="flex justify-center lg:justify-between items-center h-20 lg:h-24">
       <div className="flex items-center justify-center lg:justify-start w-full lg:w-auto">
         <img
-          src="https://i.ibb.co/jkMGMYVq/DGM-Logo.png"
-          alt="DGM Débarras Logo"
+          src="https://i.postimg.cc/yY3RNHBb/BGM-logo.png"
+          alt="BGM Débarras Logo"
           className="h-12 sm:h-14 lg:h-20 w-auto"
         />
       </div>
+
 
       {/* CTA Button - Hidden on mobile */}
       <div className="hidden lg:flex items-center space-x-4">

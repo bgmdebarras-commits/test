@@ -108,7 +108,7 @@ const QuoteForm = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Email</h4>
-                    <p className="text-blue-100">contact@dgm-debarras.fr</p>
+                    <p className="text-blue-100">contact@bgm-debarras.fr</p>
                     <p className="text-sm text-blue-200">Réponse sous 2h</p>
                   </div>
                 </div>
