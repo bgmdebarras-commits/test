@@ -35,8 +35,8 @@ const Header = () => {
       {/* Column 3 */}
       <div className="flex items-center justify-end sm:justify-center space-x-0 sm:space-x-2">
         <Phone size={14} className="text-yellow-400" />
-        <a href="tel:+21625165868" className="hover:text-orange-500">
-          <span  className="font-semibold text-white text-xs sm:text-sm lg:text-base">01 89 16 23 40 (Appel direct)</span>
+        <a href="tel:+330695613876" className="hover:text-orange-500">
+          <span  className="font-semibold text-white text-xs sm:text-sm lg:text-base">06 95 61 38 76 (Appel direct)</span>
         </a>
         
       </div>

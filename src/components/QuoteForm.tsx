@@ -97,7 +97,7 @@ const QuoteForm = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Téléphone</h4>
-                    <p className="text-blue-100">01 23 45 67 89</p>
+                    <p className="text-blue-100">06 95 61 38 76</p>
                     <p className="text-sm text-blue-200">7j/7 - 24h/24</p>
                   </div>
                 </div>

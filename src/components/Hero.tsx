@@ -57,11 +57,11 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a
-                href="tel:+33123456789"
+                href="tel:+330695613876"
                 className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone size={20} />
-                <span>01 23 45 67 89</span>
+                <span>06 95 61 38 76</span>
               </a>
               <a
                 href="#devis"

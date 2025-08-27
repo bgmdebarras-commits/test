@@ -19,19 +19,19 @@ const Footer = () => {
             
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-orange-500" />
-                <span className="font-semibold">01 23 45 67 89</span>
+                <Phone className="w-5 h-5 text-yellow-500" />
+                <span className="font-semibold">06 95 61 38 76</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-orange-500" />
+                <Mail className="w-5 h-5 text-yellow-500" />
                 <span>contact@bgm-debarras.fr</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-orange-500" />
+                <MapPin className="w-5 h-5 text-yellow-500" />
                 <span>Paris et Île-de-France</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Clock className="w-5 h-5 text-orange-500" />
+                <Clock className="w-5 h-5 text-yellow-500" />
                 <span>7j/7 - 24h/24 (urgences)</span>
               </div>
             </div>
@@ -78,7 +78,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2024 BGM Débarras. Tous droits réservés. | SIRET: 123 456 789 00012 | Assurance RC Pro
+              © 2025 BGM Débarras. Tous droits réservés. 
             </div>
             
             <div className="flex space-x-4">
