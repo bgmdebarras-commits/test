@@ -155,8 +155,12 @@ const QuoteForm = () => {
           {/* Form */}
           <div className="lg:col-span-2 order-1 lg:order-2">
             <div className="bg-white rounded-3xl shadow-2xl p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form name="request-service"
+              method="POST"
+              data-netlify="true"
+              onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="hidden" name="form-name" value="request-service" />
                   <div>
                     <label
                       htmlFor="nom"
