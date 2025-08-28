@@ -155,195 +155,200 @@ const QuoteForm = () => {
           {/* Form */}
           <div className="lg:col-span-2 order-1 lg:order-2">
             <div className="bg-white rounded-3xl shadow-2xl p-8">
-            <form 
+            <form
   name="request-service"
   method="POST"
   data-netlify="true"
   data-netlify-honeypot="bot-field"
-  onSubmit={handleSubmit}
+  onSubmit={(e) => {
+    e.preventDefault();
+    // optional validation / analytics here
+    e.currentTarget.submit(); // ensure Netlify receives the submission
+  }}
   className="space-y-6"
 >
-<input type="hidden" name="form-name" value="request-service" />
+  <input type="hidden" name="form-name" value="request-service" />
   <input type="hidden" name="bot-field" />
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                  <div>
-                    <label
-                      htmlFor="nom"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
-                    >
-                      Nom complet *
-                    </label>
-                    <input
-                      type="text"
-                      id="nom"
-                      name="nom"
-                      required
-                      value={formData.nom}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      placeholder="Votre nom et prénom"
-                    />
-                  </div>
 
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
-                    >
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      placeholder="votre@email.com"
-                    />
-                  </div>
-                </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <label
+        htmlFor="nom"
+        className="block text-sm font-semibold text-gray-700 mb-2"
+      >
+        Nom complet *
+      </label>
+      <input
+        type="text"
+        id="nom"
+        name="nom"
+        required
+        value={formData.nom}
+        onChange={handleChange}
+        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+        placeholder="Votre nom et prénom"
+      />
+    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="telephone"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
-                    >
-                      Téléphone *
-                    </label>
-                    <input
-                      type="tel"
-                      id="telephone"
-                      name="telephone"
-                      required
-                      value={formData.telephone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      placeholder="06 12 34 56 78"
-                    />
-                  </div>
+    <div>
+      <label
+        htmlFor="email"
+        className="block text-sm font-semibold text-gray-700 mb-2"
+      >
+        Email *
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        value={formData.email}
+        onChange={handleChange}
+        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+        placeholder="votre@email.com"
+      />
+    </div>
+  </div>
 
-                  <div>
-                    <label
-                      htmlFor="typeService"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
-                    >
-                      Type de service *
-                    </label>
-                    <select
-                      id="typeService"
-                      name="typeService"
-                      required
-                      value={formData.typeService}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    >
-                      <option value="">Sélectionnez un service</option>
-                      <option value="maison">Débarras de maison</option>
-                      <option value="appartement">Débarras d'appartement</option>
-                      <option value="cave">Débarras de cave/grenier</option>
-                      <option value="jardin">Débarras de jardin</option>
-                      <option value="post-travaux">Débarras post-travaux</option>
-                      <option value="entreprise">Débarras professionnel</option>
-                      <option value="autre">Autre</option>
-                    </select>
-                  </div>
-                </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <label
+        htmlFor="telephone"
+        className="block text-sm font-semibold text-gray-700 mb-2"
+      >
+        Téléphone *
+      </label>
+      <input
+        type="tel"
+        id="telephone"
+        name="telephone"
+        required
+        value={formData.telephone}
+        onChange={handleChange}
+        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+        placeholder="06 12 34 56 78"
+      />
+    </div>
 
-                <div>
-                  <label
-                    htmlFor="adresse"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Adresse d'intervention *
-                  </label>
-                  <input
-                    type="text"
-                    id="adresse"
-                    name="adresse"
-                    required
-                    value={formData.adresse}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    placeholder="Adresse complète avec code postal"
-                  />
-                </div>
+    <div>
+      <label
+        htmlFor="typeService"
+        className="block text-sm font-semibold text-gray-700 mb-2"
+      >
+        Type de service *
+      </label>
+      <select
+        id="typeService"
+        name="typeService"
+        required
+        value={formData.typeService}
+        onChange={handleChange}
+        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+      >
+        <option value="">Sélectionnez un service</option>
+        <option value="maison">Débarras de maison</option>
+        <option value="appartement">Débarras d'appartement</option>
+        <option value="cave">Débarras de cave/grenier</option>
+        <option value="jardin">Débarras de jardin</option>
+        <option value="post-travaux">Débarras post-travaux</option>
+        <option value="entreprise">Débarras professionnel</option>
+        <option value="autre">Autre</option>
+      </select>
+    </div>
+  </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="surface"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
-                    >
-                      Surface / Volume
-                    </label>
-                    <input
-                      type="text"
-                      id="surface"
-                      name="surface"
-                      value={formData.surface}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      placeholder="ex: 100m², 3 pièces, cave 20m²..."
-                    />
-                  </div>
+  <div>
+    <label
+      htmlFor="adresse"
+      className="block text-sm font-semibold text-gray-700 mb-2"
+    >
+      Adresse d'intervention *
+    </label>
+    <input
+      type="text"
+      id="adresse"
+      name="adresse"
+      required
+      value={formData.adresse}
+      onChange={handleChange}
+      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+      placeholder="Adresse complète avec code postal"
+    />
+  </div>
 
-                  <div>
-                    <label
-                      htmlFor="datePreferee"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
-                    >
-                      Date souhaitée
-                    </label>
-                    <input
-                      type="date"
-                      id="datePreferee"
-                      name="datePreferee"
-                      value={formData.datePreferee}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    />
-                  </div>
-                </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <label
+        htmlFor="surface"
+        className="block text-sm font-semibold text-gray-700 mb-2"
+      >
+        Surface / Volume
+      </label>
+      <input
+        type="text"
+        id="surface"
+        name="surface"
+        value={formData.surface}
+        onChange={handleChange}
+        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+        placeholder="ex: 100m², 3 pièces, cave 20m²..."
+      />
+    </div>
 
-                <div>
-                  <label
-                    htmlFor="description"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Description détaillée *
-                  </label>
-                  <textarea
-                    id="description"
-                    name="description"
-                    required
-                    rows={6}
-                    value={formData.description}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
-                    placeholder="Décrivez précisément : type de débarras, état des lieux, objets encombrants, difficultés d'accès, étage, ascenseur, etc."
-                  />
-                </div>
+    <div>
+      <label
+        htmlFor="datePreferee"
+        className="block text-sm font-semibold text-gray-700 mb-2"
+      >
+        Date souhaitée
+      </label>
+      <input
+        type="date"
+        id="datePreferee"
+        name="datePreferee"
+        value={formData.datePreferee}
+        onChange={handleChange}
+        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+      />
+    </div>
+  </div>
 
-                <div className="bg-blue-50 p-6 rounded-2xl">
-                  <p className="text-sm text-blue-800">
-                    <strong>Confidentialité :</strong> Vos données sont traitées
-                    en toute sécurité et ne seront utilisées que pour établir
-                    votre devis personnalisé.
-                  </p>
-                </div>
+  <div>
+    <label
+      htmlFor="description"
+      className="block text-sm font-semibold text-gray-700 mb-2"
+    >
+      Description détaillée *
+    </label>
+    <textarea
+      id="description"
+      name="description"
+      required
+      rows={6}
+      value={formData.description}
+      onChange={handleChange}
+      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+      placeholder="Décrivez précisément : type de débarras, état des lieux, objets encombrants, difficultés d'accès, étage, ascenseur, etc."
+    />
+  </div>
 
-                <button
-                  type="submit"
-                  className="w-full bg-yellow-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 flex items-center justify-center space-x-3"
-                >
-                  <Send size={20} />
-                  <span>Envoyer ma demande de devis gratuit</span>
-                </button>
-              </form>
+  <div className="bg-blue-50 p-6 rounded-2xl">
+    <p className="text-sm text-blue-800">
+      <strong>Confidentialité :</strong> Vos données sont traitées
+      en toute sécurité et ne seront utilisées que pour établir
+      votre devis personnalisé.
+    </p>
+  </div>
+
+  <button
+    type="submit"
+    className="w-full bg-yellow-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 flex items-center justify-center space-x-3"
+  >
+    <Send size={20} />
+    <span>Envoyer ma demande de devis gratuit</span>
+  </button>
+</form>
+
             </div>
           </div>
         </div>

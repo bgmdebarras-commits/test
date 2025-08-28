@@ -1,23 +1,11 @@
-<!-- Hidden static form for Netlify detection -->
-<form name="request-service" netlify hidden>
+<form name="request-service" method="POST" data-netlify="true" netlify hidden>
     <input type="hidden" name="form-name" value="request-service" />
+    <input type="hidden" name="bot-field" />
   
-    <input type="text" name="name" />
+    <input type="text" name="nom" />
     <input type="email" name="email" />
     <input type="tel" name="telephone" />
-    
-
-    <select name="typeService">
-        <option value="">Sélectionnez un service</option>
-        <option value="maison">Débarras de maison</option>
-        <option value="appartement">Débarras d'appartement</option>
-        <option value="cave">Débarras de cave/grenier</option>
-        <option value="jardin">Débarras de jardin</option>
-        <option value="post-travaux">Débarras post-travaux</option>
-        <option value="entreprise">Débarras professionnel</option>
-        <option value="autre">Autre</option>
-    </select>
-  
+    <select name="typeService"></select>
     <input type="text" name="adresse" />
     <input type="text" name="surface" />
     <input type="date" name="datePreferee" />
