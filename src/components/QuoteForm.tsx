@@ -243,14 +243,10 @@ const QuoteForm = () => {
                     >
                       <option value="">Sélectionnez un service</option>
                       <option value="maison">Débarras de maison</option>
-                      <option value="appartement">
-                        Débarras d'appartement
-                      </option>
+                      <option value="appartement">Débarras d'appartement</option>
                       <option value="cave">Débarras de cave/grenier</option>
                       <option value="jardin">Débarras de jardin</option>
-                      <option value="post-travaux">
-                        Débarras post-travaux
-                      </option>
+                      <option value="post-travaux">Débarras post-travaux</option>
                       <option value="entreprise">Débarras professionnel</option>
                       <option value="autre">Autre</option>
                     </select>
