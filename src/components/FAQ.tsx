@@ -7,7 +7,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Que faire des objets et meubles vidés ?",
-      answer: "Après le débarras total, nous offrons 20 % des objets récupérés aux associations caritatives. Ensuite, nous nous engageons à donner une seconde vie à 30 % des meubles, vêtements et appareils électroménagers. Puis, nous les proposons à la vente. Pour les 50 % restants, nous adoptons une démarche écologique en déposant les encombrants au recyclage à la déchetterie."
+      answer: "Après le débarras complet, nous remettons 20 % des objets collectés à des associations caritatives. Ensuite, nous redonnons une seconde vie à 30 % des meubles, vêtements et appareils électroménagers en les réutilisant. Puis, nous les mettons en vente. Quant aux 50 % restants, ils sont orientés vers le recyclage en déchetterie dans une démarche écologique."
     },
     {
       question: "Combien coûtent les services de débarras à Paris ou IDF ?",
