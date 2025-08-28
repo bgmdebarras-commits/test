@@ -31,15 +31,20 @@ const QuoteForm = () => {
   
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const data = new URLSearchParams();
+  
+    formData.forEach((value, key) => {
+      data.append(key, value.toString());
+    });
   
     try {
       await fetch("/", {
         method: "POST",
-        body: new URLSearchParams(formData as any).toString(), // ✅ TS-safe cast
+        body: data.toString(),
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
       });
   
-      setIsSubmitted(true);
+      setIsSubmitted(true); // show your custom success screen
     } catch (error) {
       console.error("Form submission error:", error);
     }
