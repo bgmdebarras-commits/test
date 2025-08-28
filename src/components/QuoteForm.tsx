@@ -26,10 +26,23 @@ const QuoteForm = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Demande de devis:', formData);
-    setIsSubmitted(true);
+  
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+  
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: new URLSearchParams(formData as any).toString(), // ✅ TS-safe cast
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      });
+  
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Form submission error:", error);
+    }
   };
 
   if (isSubmitted) {
