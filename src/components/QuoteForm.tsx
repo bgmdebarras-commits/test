@@ -27,7 +27,7 @@ const QuoteForm = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault(); // ✅ prevents redirect
   
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -44,11 +44,12 @@ const QuoteForm = () => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
       });
   
-      setIsSubmitted(true); // show your custom success screen
+      setIsSubmitted(true); // ✅ show your custom success screen only
     } catch (error) {
       console.error("Form submission error:", error);
     }
   };
+  
 
   if (isSubmitted) {
     return (
@@ -178,11 +179,8 @@ const QuoteForm = () => {
   method="POST"
   data-netlify="true"
   data-netlify-honeypot="bot-field"
-  onSubmit={(e) => {
-    e.preventDefault();
-    // optional validation / analytics here
-    e.currentTarget.submit(); // ensure Netlify receives the submission
-  }}
+  onSubmit={handleSubmit}
+  noValidate
   className="space-y-6"
 >
   <input type="hidden" name="form-name" value="request-service" />
